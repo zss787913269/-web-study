@@ -1,0 +1,66 @@
+
+
+
+/**
+ * 队列的常用方法
+ * 1.enqueue(element) 向队尾增加一个或多个项
+ * 2.delqueue 移除队列的第一个,并返回被移除的元素
+ * 3.font 返回队列的第一个元素 == 查看队列的第一个元素
+ * 4.isEmpty 是否为空队列
+ * 5.size 队列的元素个数
+ * 6.toString 将队列的内容转化为字符串形式 
+ */
+function Queue(){
+    this.item = []
+
+    Queue.prototype.enqueue = function (event){
+        this.item.push(event)
+    }
+
+    Queue.prototype.delqueue = function (){
+         return   this.item.shift()
+    }
+
+    Queue.prototype.font = function (){
+        return this.item[0]
+    }
+
+    Queue.prototype.isEmpty = function (){
+        return this.item.length == 0
+    }
+
+    Queue.prototype.size = function (){
+        return this.item.length
+    }
+
+
+}
+
+
+// 思路
+
+    function passGame(nameList,num){
+        // 1.
+        let q = new Queue()
+
+        // 2.加入到队列里面
+        for(let i of nameList){
+            q.enqueue(i)
+        }
+
+        // 循环
+
+       while(q.size() > 1){
+        for(let j=0;j<num-1;j++){
+            // 把num前面的都删除 然后重新加入到队列里面去 排在后面
+            
+            q.enqueue(q.delqueue())
+        }
+        q.delqueue()
+       }
+
+       console.log(q.font())
+        
+    }
+
+    passGame(["a","b","c","d","e"],3)

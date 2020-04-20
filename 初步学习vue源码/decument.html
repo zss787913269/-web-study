@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+            DocumentFragment，文档片段(高效批量更新多个结点)
+
+     -->
+     <div>标题</div>
+
+     <ul id='zss'>
+         <li>test1</li>
+         <li>test2</li>
+         <li>test3</li>
+     </ul>
+
+
+     <script>
+    //  1.创建fragment
+    const ul = document.getElementById('zss')
+    const fragment = document.createDocumentFragment()
+
+    
+    // 2. 取出ul中所有子节点 保存到fragment
+
+    let child 
+    // 先赋值 然后在判断是否为真
+    while(child = ul.firstChild){ //一个节点只能有一个父亲
+         // 把child 加入到fragment中
+        fragment.appendChild(child) //先将child从ul中移除，添加为fragment子节点 
+        // 第一个节点是文本节点 被移除了 就是li是第一个子节点
+    }
+
+    // 3.更新fragment中所有的li的文本
+    Array.from(fragment.childNodes).forEach(node=> {
+            if(node.nodeType ===1){
+                // 元素节点li
+                node.textContent = 'aslh'
+            }
+    })    
+    // 4.将fragment插入ul 
+    ul.appendChild(fragment)
+     
+     
+     
+     
+     
+     </script>
+    
+</body>
+</html>

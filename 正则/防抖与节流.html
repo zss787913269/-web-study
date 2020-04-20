@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">节流提交</button>
+    <script>
+
+        // 需求：点击一次以后，一秒才触发  使用定时器，最后清楚定时器
+
+        // var btn = document.getElementById('btn')
+
+        //这是一个ajax请求方法 
+        // success 有参数的时候 怎么办
+        // function success(e){
+        //     console.log("提交成功");
+        // }
+        //写一个防抖函数执行ajax方法
+        /*
+        
+        闭包保存一个标记来保存 setTimeout 返回的值，每当用户输入的时候把前一个 
+        setTimeout clear 掉，然后又创建一个新的
+        setTimeout，这样就能保证输入字符后的
+        interval 间隔内如果还有字符输入的话，就不会执行 fn 函数了。
+
+        为什么要使用this  如果要在success方法中使用this 那么在fd函数调用的时候 就会修改this的作用域 所以必须绑定this
+        参数如何传  传给return 的函数
+        
+        */
+
+        // function fd(fn,delay){
+        //     var time = null;
+        //     return (...args)=>{
+        //         clearInterval(time)
+        //     time =  setTimeout(()=>{
+
+        //         fn.apply(this,args);
+        //         // 把this绑定在fn上
+        //        },delay)
+        //     }
+        // }
+
+        
+
+        //函数节流 每两秒执行一次
+
+
+        var btn = document.getElementById('btn')
+
+         function success(e){
+            console.log("提交成功");
+        }
+
+
+        function fb (fn,delay){
+            // 定义一个开关变量
+            let flag = true 
+           return (...args)=>{
+           
+            if(!flag) return 
+                flag = false
+            setTimeout(()=>{
+            
+                fn.apply(args)
+                flag = true
+            },delay)
+           }
+
+        }
+
+
+
+        btn.addEventListener('click',fb(success,1000))
+
+
+
+
+
+
+
+        </script>
+
+    
+</body>
+</html>

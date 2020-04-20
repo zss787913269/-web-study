@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+        Object.defineProperties() 方法直接在一个对象上定义新的属性或修改现有属性，并返回该对象。
+        Object.defineProperties(obj,propertyName,{}):给对象添加属性 
+
+
+
+        属性描述符：
+        数据描述符：
+        configurable: 是否可以重新定义 默认:false
+        enumerable：是否可以枚举 默认：false
+        value:初始值  默认：undefined
+        writable：是否可以修改属性值 默认：false
+        访问描述符：
+        get：回调函数，根据其它相关的属性动态计算得到当前属性值
+        set：回调函数，监视当前属性值的变化，更新其他相关的属性值
+
+        Object.kety(obj) ：得到自身对象可以枚举属性组成的数组
+        hasOwnProperty() :指示对象自身属性中是否具有指定的属性（也就是是否有指定的键）
+        
+ -->
+    <script>
+    
+    let obj = {
+        firstName : 'A',
+        lastName:'B'
+    }
+    // 给obj添加fullName属性
+   
+        
+    
+    Object.defineProperty(obj,"fullName",{
+  
+        get(){
+            return this.firstName + '-' + this.lastName
+        },
+        set(value){
+            // join() 方法用于把数组中的所有元素放入一个字符串。
+            // split() 方法用于把一个字符串分割成字符串数组。
+            const names = value.split('-')
+            this.firstName = names[0]
+            this.lastName = names[1]
+        }
+
+    })
+    console.log(obj.fullName)
+    obj.firstName = 'C'
+    obj.lastName = 'D'
+    console.log(obj.fullName)
+    obj.fullName = 'E-F'
+    console.log(obj.firstName,obj.lastName)
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    
+    
+    
+    //字符串中实现替换的方法 一般都是伴随正则使用
+
+    // let str = "olige@2019|olige@2020"
+
+    // str = str.replace(/olige/g,"欧里给")
+    
+    
+    
+    
+    // 使用分组功能 找出每个分组
+    // let time = "2019-08-13"
+
+    // let reg = /^(\d{4})-(\d{1,2})-(\d{1,2})$/
+
+    //     time  = time.replace(reg,"$1年$2月$3日")  
+
+
+
+
+
+    /* console.log(time.split("-"));
+
+    // time = time.split("-")
+
+    // time = `${time[0]}年-${time[1]}月-${time[2]}日`  */
+
+
+
+    /* replace的第二个参数是一个函数  
+    
+    
+    str.replace(reg,()=>{
+
+    })
+
+    reg匹配到几次 函数就会执行几次 ，不仅把方法执行，而且replace还给方法传递了实参信息 和exec捕获的内容一致的信息：大正则匹配的内容，小分组匹配的信息
+    
+    
+    
+    */
+
+
+
+     let time = "2019-08-13"
+
+     let reg = /^(\d{4})-(\d{1,2})-(\d{1,2})$/
+
+
+        time = time.replace(reg,(big,...arg)=>{
+            console.log(big);
+            let [a,b,c] = arg;
+            console.log(a,b,c);
+        })
+
+
+    // 首字母大写
+
+    // let str = "good good study,day day up!"
+
+    // let reg = /(\b[a-zA-Z])[a-zA-Z]*\b/g
+    // // 第一个参数是小分组匹配的信息
+    // str = str.replace(reg,(...arg)=>{
+    //     let [content,$1] = arg
+
+    //     $1 = $1.toUpperCase()
+    //     content = content.substring(1)
+    //     return $1+content
+    // })
+
+    // console.log(str);
+
+
+    //验证一个字符串中哪个字母出现的次数最多，多少次
+
+    // let str = 'aaaaabbbshhhaskjdlahfoqqqadasaaa'
+
+    // let reg = //
+
+    // 去重思维
+    // let obj = {}
+    // let max = 0
+    // let arr= []
+
+    // for(let i of str ){
+    //     if(obj[i]){
+    //         obj[i]++
+    //     }else{
+    //         obj[i] = 1
+    //     } 
+    // }
+
+
+    // for(let i in obj){
+    //     if(obj[i]>max){
+    //         max = obj[i]
+    //     }
+    // }
+
+
+    // for(let i in obj){
+    //     if(obj[i] == max)
+    //     {
+    //         arr.push(i)
+    //     }
+    // }
+
+    // console.log(arr+'----'+max);
+
+
+
+    </script>
+    
+</body>
+</html>

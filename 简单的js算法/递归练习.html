@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <script>
+        
+            // 递归练习
+
+        //     function sum(num){
+        //         if(num <= 1){
+        //             return 1
+        //         }else{
+        //             return num* arguments.callee(num-1)
+        //         }
+        //     }
+
+        //     var ff = sum;
+
+        // 
+        
+        //     sum = null
+
+        //    console.log(ff(4));
+
+
+        var  sum = (function f(num){
+                if(num <= 1){
+                    return 1
+                }else {
+                    return num* f(num-1)
+                }
+
+        })
+
+        var ff = sum;
+
+        sum = null;
+
+        // console.log(sum(4));
+        
+        
+        </script>
+
+</body>
+</html>

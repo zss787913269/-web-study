@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    
+    
+    
+        ~function(){
+            
+            function myIndexOf(T){
+
+                // 比较
+
+                let lenT = T.length,
+                    lenS = this.length,
+                    res = -1
+
+                for(let i=0;i<lenS-lenT+1;i++){
+                    if(this.substr(i,lenT)==T){
+                        res = i
+                        break
+                    }
+                }
+                return res
+
+            }
+
+            String.prototype.myIndexOf = myIndexOf
+        }()
+    
+
+    let Str = "zhangyingming",
+        T = "z",
+        arr=[1,2,3],
+        a = []
+
+        
+        // console.log(Str.myIndexOf(T));
+
+      arr =   arr.map((item)=>{
+            
+            return item+1
+        })
+
+        console.log(arr);
+
+    
+    
+    
+    
+    </script>
+
+
+    
+</body>
+</html>

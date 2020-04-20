@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+    
+        // 封装队列
+    function Queue(){
+
+
+        this.item = []
+        // 1.向队列中加入一个元素
+        Queue.prototype.qepush = function(e){
+           this.item.push(e)
+        }
+        // 2. 向队列中删除一个元素
+
+        Queue.prototype.quremove = function(){
+            return this.item.shift()
+        }
+        // 3.查看队列的长度
+
+        Queue.prototype.qusize = function(e){
+            return this.item.length
+        }
+
+        // 4.查看队列最前面的元素
+        Queue.prototype.front = function(){
+            return this.item[0]
+        }
+
+        // 5.查看队列是否为空
+
+        Queue.prototype.is = function(){
+            return this.item.length == 0
+        }
+
+
+
+    }
+
+    // 使用队列
+    // var queue = new Queue()
+    
+    
+    //     queue.qepush(1)
+    //     queue.qepush(2)
+    //     queue.qepush(3)
+    //     queue.qepush(4)
+
+    //     queue.quremove()
+    //     console.log(queue.is())
+    //     console.log(queue.qusize())
+    //     console.log(queue.front())
+    //     console.log(queue.item)
+    
+
+    // 击鼓传花
+    // 规则：当喊到五的时候 就把第五个删除 然后其他的排到后面  直到剩下最后一个为止
+
+
+
+    function cheek(name,num){
+        // 传入两个值
+
+        // 创建一个队列
+        let queue = new Queue()
+
+        // 把名字循环加入到队列当中
+
+        for(let i=0;i<name.length;i++){
+            queue.qepush(name[i])
+        }
+
+       while(queue.qusize() > 1){
+        for(let i=0;i<num-1;i++){
+            // 把删除的元素加重新加入到队列中
+            queue.qepush(queue.quremove())
+        }
+        // 把num删除 
+        queue.quremove()
+       }
+
+       //    获取剩下的那个人
+       console.log(queue.qusize())
+       
+       let endName = queue.front()
+
+       console.log('最终剩下的人:'+endName)
+       return name.indexOf(endName)
+    }
+  let  name = ["A","B","C","D","E"]
+   console.log( cheek(name,1))
+
+    
+    
+    </script>
+
+    
+</body>
+</html>

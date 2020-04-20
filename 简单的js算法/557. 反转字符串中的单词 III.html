@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    /*
+    给定一个字符串，你需要反转字符串中每个单词的字符顺序，同时仍保留空格和单词的初始顺序。
+
+        示例 1:
+
+        输入: "Let's take LeetCode contest"
+        输出: "s'teL ekat edoCteeL tsetnoc" 
+
+
+    
+    */
+    var reverseWords = function(str) {
+        // 先把字符串变成数组
+        // split() 方法用于把一个字符串分割成字符串数组
+        // js数组中的reverse()方法
+        // reverse方法是将数组中的元素的顺序进行反转，在原数组上操作，然后返回原数组
+        // join() 方法用于把数组中的所有元素放入一个字符串。
+        // 元素是通过指定的分隔符进行分隔的。
+        
+        // 把字符串 按照空格 分割成数组
+            str.split(' ')
+            // console.log(arr)
+            // 循环数组
+            let res = arr.map(item=>{
+                // 已经循环得到了str的每个单词 
+                // 把
+                console.log(typeof item)
+                
+                return item.split('').reverse().join('')
+                
+            })
+
+            
+        return res.join(' ')
+        };
+
+    
+    console.log(reverseWords("Let's take LeetCode contest"))
+    
+    
+    </script>
+
+</body>
+</html>

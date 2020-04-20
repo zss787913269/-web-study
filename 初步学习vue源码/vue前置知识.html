@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">123</div>
+
+    <ul>
+        <li>憨憨不是敢敢</li>
+        <li>敢敢不是憨憨</li>
+        <li>你头发乱了</li>
+    </ul>
+    <!-- 
+        1.[].slice.call(list) : 将伪数组转换为真数组
+        2.node.nodeType ：得到节点类型
+     -->
+     <script>
+    //  1.[].slice.call(list) : 将伪数组转换为真数组
+    const lis = document.getElementsByTagName('li')
+    // lis是伪数组 它有长度 下标 可以遍历循环
+    //  Array.from(list)可以将伪数组 转化为真数组 ES6语法
+    // slice()方法 返回一个从开始到结束(不包括结束)选择的数组的一部分浅拷贝到一个新数组对象 原始数组不会被修改
+    const list = [].slice.call(lis) // 把[].slice的方法 给lis调用
+    // console.log(list instanceof Array,list.forEach)
+
+
+    // 2.node.nodeType ：得到节点类型
+    const elemNode = document.getElementById('test')
+    // console.log(elemNode.nodeType,textNode.nodeType)
+
+    
+
+    
+
+     
+     
+     
+     </script>
+</body>
+</html>

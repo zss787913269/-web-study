@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    
+    // 10进制转2进制
+    function ten(e){
+        // 定义一个栈
+        var stack = new Stack()
+
+        while (e > 0){
+
+            // 获取余数，并且放入到栈中
+            stack.push(e % 2)
+             
+            e = Math.floor(e / 2)
+        }
+        var str = ''
+        while(!stack.isEmpty()){
+            str += stack.pop
+        }
+        return str
+    }
+
+    console.log(ten(100))
+    
+    
+    
+    </script>
+    
+</body>
+</html>

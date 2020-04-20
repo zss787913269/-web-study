@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    
+    function Stack(){
+        this.item = []
+
+    Stack.prototype.push = function (e){
+            this.item.push(e)
+        }
+    Stack.prototype.pop = function(){
+        return this.item.pop()
+    }
+    Stack.prototype.size = function(){
+        return this.item.length
+    }
+    Stack.prototype.isEmpty = function(){
+        if(this.item.length>0){
+            return true
+        }
+        else return false
+    }
+    }
+   
+    
+    // var stack  = new Stack()
+    
+    // stack.push(1)
+    // stack.push(2)
+    // stack.push(3)
+    // stack.push(4)
+    // var p = stack.pop()
+    // var s= stack.size()
+
+
+    // console.log(stack.item)
+    // // console.log(p)
+    // console.log(stack.isEmpty())
+    
+    function ten(e){
+        // 定义一个栈
+        var stack = new Stack()
+
+        while (e > 0){
+
+            // 获取余数，并且放入到栈中
+            stack.push(e % 2)
+             
+            e = Math.floor(e / 2)
+        }
+        var str = ''
+        while(!stack.isEmpty()){
+            str += stack.pop
+        }
+        return str
+    }
+
+    console.log(ten(100))
+        
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

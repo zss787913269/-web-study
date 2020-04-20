@@ -1,0 +1,379 @@
+.right {
+  text-align: right;
+}
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
+}
+.bold {
+  font-weight: bold;
+}
+.fontSizeA {
+  font-size: 18px;
+  line-height: 18px;
+}
+.fontSizeB {
+  font-size: 20px;
+  line-height: 20px;
+}
+.fontSizeC {
+  font-size: 22px;
+  line-height: 22px;
+}
+.fontSizeD {
+  font-size: 24px;
+  line-height: 24px;
+}
+.fontSizeE {
+  font-size: 26px;
+  line-height: 26px;
+}
+.fontSizeF {
+  font-size: 28px;
+  line-height: 28px;
+}
+.fontSizeG {
+  font-size: 30px;
+  line-height: 30px;
+}
+.fontSizeH {
+  font-size: 32px;
+  line-height: 32px;
+}
+.fontSizeI {
+  font-size: 34px;
+  line-height: 34px;
+}
+.fontSizeJ {
+  font-size: 36px;
+  line-height: 36px;
+}
+.fontSizeK {
+  font-size: 38px;
+  line-height: 38px;
+}
+.fontSizeL {
+  font-size: 40px;
+  line-height: 40px;
+}
+.fontSizeM {
+  font-size: 42px;
+  line-height: 42px;
+}
+.fontSizeN {
+  font-size: 48px;
+  line-height: 48px;
+}
+.fontSizeO {
+  font-size: 50px;
+  line-height: 50px;
+}
+.fontSizeP {
+  font-size: 56px;
+  line-height: 56px;
+}
+.fontSizeQ {
+  font-size: 64px;
+  line-height: 64px;
+}
+.fontSizeR {
+  font-size: 66px;
+  line-height: 66px;
+}
+.fontSizeS {
+  font-size: 70px;
+  line-height: 70px;
+}
+.font-scA2 {
+  color: #ff7272;
+}
+.font-scE1 {
+  color: #333333;
+}
+.font-scE2 {
+  color: #666666;
+}
+.font-scE3 {
+  color: #999999;
+}
+.font-scF5 {
+  color: #ffffff;
+}
+.font-mcA1 {
+  color: #0162fb;
+}
+.font-mcA5 {
+  color: #60a8ff;
+}
+.font-scD1 {
+  color: #adc6ff;
+}
+.font-scF1 {
+  color: #95a1af;
+}
+.font-scF2 {
+  color: #cfd4db;
+}
+.bgc-mcA1 {
+  background-color: #0162fb;
+}
+.bgc-mcA2 {
+  background-color: #2878ff;
+}
+.bgc-mcA3 {
+  background-color: #0188fb;
+}
+.bgc-mcA4 {
+  background-color: #2699fb;
+}
+.bgc-mcA5 {
+  background-color: #60a8ff;
+}
+.bgc-mcA6 {
+  background-color: #7fc4fd;
+}
+.bgc-scA1 {
+  background-color: #ff3b3b;
+}
+.bgc-scA2 {
+  background-color: #ff7272;
+}
+.bgc-scB1 {
+  background-color: #24c588;
+}
+.bgc-scC1 {
+  background-color: #7266d5;
+}
+.bgc-scD1 {
+  background-color: #adc6ff;
+}
+.bgc-scE1 {
+  background-color: #333333;
+}
+.bgc-scE2 {
+  background-color: #666666;
+}
+.bgc-scE3 {
+  background-color: #999999;
+}
+.bgc-scE4 {
+  background-color: #d8d8d8;
+}
+.bgc-scE5 {
+  background-color: #edeff3;
+}
+.bgc-scE6 {
+  background-color: #f0f0f0;
+}
+.bgc-scE7 {
+  background-color: #f5f6f8;
+}
+.bgc-scE8 {
+  background-color: #f8f8f8;
+}
+.bgc-scF1 {
+  background-color: #95a1af;
+}
+.bgc-scF2 {
+  background-color: #cfd4db;
+}
+.bgc-scF3 {
+  background-color: #ecf4ff;
+}
+.bgc-scF4 {
+  background-color: #f4f8ff;
+}
+.bgc-scF5 {
+  background-color: #ffffff;
+}
+.bgc-linearA {
+  background-image: linear-gradient(to right, #f9d423, #ffab26);
+}
+.bgc-linearB {
+  background-image: linear-gradient(to right, #ff3b3b, #ff6868);
+}
+.bgc-linearC {
+  background-image: linear-gradient(to right, #1cdcff, #3ca4fd);
+}
+.bgc-linearD {
+  background-image: linear-gradient(to right, #fd6b5b, #f5af19);
+}
+.bgc-linearE {
+  background-image: linear-gradient(to right, #40d8de, #0089ff);
+}
+.bgc-linearF {
+  background-image: linear-gradient(to right, #ffaf5f, #ffd64e);
+}
+.border-mcA2 {
+  border-color: #2878ff;
+  border-width: 1px;
+  border-style: solid;
+}
+.border-scA2 {
+  border-color: #ff7272;
+  border-width: 1px;
+  border-style: solid;
+}
+.border-scC1 {
+  border-color: #7266d5;
+  border-width: 1px;
+  border-style: solid;
+}
+.border-scE5 {
+  border-color: #edeff3;
+  border-width: 1px;
+  border-style: solid;
+}
+.border-scE6 {
+  border-color: #f0f0f0;
+  border-width: 1px;
+  border-style: solid;
+}
+.row-js-as {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.row-jc-as {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.row-je-as {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.row-jb-as {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.row-ja-as {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.row-js-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-jc-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-je-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-jb-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.row-ja-ac {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-js-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-jc-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-je-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-jb-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-ja-ac {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.column-js-as {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.column-jc-as {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.column-je-as {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.column-jb-as {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.column-ja-as {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}

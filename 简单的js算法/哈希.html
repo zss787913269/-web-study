@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 给出出现次数最多的那个元素 或者出现次数最少的元素
+        // 给出一个数组 找出出现次数最多的元素 或者次数最少的元素 
+
+        // 定义一个数组
+
+
+// 定义一个空对象
+// let obj = {}
+
+// for(let i = 0;i<arr.length;i++){
+//     // 判断是否存在 如果存在 arr[i]++ 如果不存在 arr[i] = 1
+//     obj[arr[i]] ? obj[arr[i]]++ : (obj[arr[i]] = 1)
+// }
+
+
+// console.log(obj)
+/* 循环 i = 0 
+
+
+obj[arr[0]] 
+0 haha  haha:1
+
+obj[arr[1]]
+1 haha  haha:2
+
+obj[arr[2]]
+2 111  111:1
+
+obj[arr[3]]
+3 222 222:1
+
+obj[arr[4]]
+
+4 111 111：2
+
+
+*/
+
+
+
+
+
+
+// console.log(JSON.stringify(obj))
+        
+        
+        
+const arr = ['haha','haha','111','222','111',111,2323,4,4]
+let map = new Map()
+
+for(let i =0;i<arr.length;i++){
+    // 取出map的值
+    // 一开始是不存在的
+    let val = map.get(arr[i])
+    // 设置map的值
+    // 如果存在val val+1 不存在val val=1
+
+    map.set(arr[i], val ? ++val : 1)
+}
+
+console.log(map)
+// for (var [key,value] of map) {
+//   console.log(key,value);
+// }
+        
+        
+
+
+        
+        
+        </script>
+    
+</body>
+</html>

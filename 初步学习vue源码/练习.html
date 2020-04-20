@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+    
+    
+    const obj ={
+        fName:'A',
+        lName:'B'
+    }
+
+    Object.defineProperty(obj,"fullName",{
+        get(){
+            return this.fName+'-'+this.lName
+        },
+        set(value){
+            // value初始化的值 （get里面的值）
+            const names = value.split('-')
+            this.fName = names[0]
+            this.lName = names[1]
+        },
+        enumerable:true
+    })
+
+    console.log(obj.fullName)
+    obj.fName='C'
+    obj.lName='D'
+    console.log(obj.fullName)
+    obj.fullName = 'E-F'
+    console.log(obj.fName,obj.lName);
+    console.log(obj.value);
+    
+    const list = Object.keys(obj)
+    console.log(list);
+    console.log(obj.hasOwnProperty("fullName"),obj.hasOwnProperty("toString"));
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

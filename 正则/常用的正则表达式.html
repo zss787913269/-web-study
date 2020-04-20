@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    
+   
+    /* 
+     验证是否未有效数字
+     规则分析
+     1.+-号开头
+     2.小数可能有 可能没有 有的话 后面必须加数字 (\.\d)?
+     3.第一位是0-9都可以 多位首位不能为0 (\d|([1-9]\d+))
+
+    */
+
+
+    // var reg = /^[+-]?(\d|[1-9]\d+)(\.\d+)?$/
+
+    // console.log(reg.test("1"));
+
+    /*
+    
+    验证密码
+    由数字
+    数字  \d +
+    字母   
+    下划线 
+    6-16位数
+    组成
+
+    */
+
+    // var reg = /\w{6,16}/
+    // console.log(reg.test("12356"));
+
+
+    /*
+    
+    验证真实姓名
+    汉字 /^[\u4e00-u9Fa5]$/
+
+
+    
+    */
+
+
+    // 验证邮箱
+
+    /*
+    
+    
+    开头：  ^\w+ 多个 数字 字母 下划线 
+            (-\w+) -号加多个 数字 字母 下划线 
+            或者 (.) 多个 数字 字母 下划线 
+            * 0个或多个
+             @后面加上 一个以上 a-zA-Z0-9
+         2   加上 . 或者 - 
+         3   加上 a-zA-Z0-9 一个或者多个
+            2跟3 0个或者以上
+        加上 .[a-zA-Z0-9] 结束
+
+
+ 
+
+    
+    */
+
+
+
+       let reg = /^(\d{3})(\d{4})(\d{5})$/
+
+       console.log(reg.exec("111111111111"));
+            
+
+
+
+
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        .container{
+            margin: 30px auto;
+            width:600px;
+            height: 300px;
+        }
+        .p{
+            border:solid 3px #a33;
+        }
+        .c{
+            width: 100px;
+            height: 100px;
+            background-color: #060;
+            margin: 10px;
+            float: left;
+        }
+       
+        .p::after{
+            content: "";
+            clear: both;
+            display: block;
+            visibility: hidden;
+            height: 0;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- 
+
+        BFC block format context 块级格式化上下文
+        作用：形成一个完全独立的布局，让空间中的子元素不会影响到外面的布局。
+
+        如何才能形成：4中
+        1.float不为none;
+        2.position不为relative 和 static
+        3.overflow 为auto scroll 和 hindden
+        4.display的值为table-cess 或 inline-block
+        总结:让元素脱离文档流就行
+
+ -->
+
+
+    <!-- 第一种 解决浮动元素令父元素高度塌陷的问题 -->
+
+    <div class="container">
+        <div class="p">
+            <div class="c"></div>
+            <div class="c"></div>
+            <div class="c"></div>
+           
+        </div>
+    </div>
+    
+
+</body>
+</html>

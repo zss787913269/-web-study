@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    
+     
+
+        请判断一个字符串出现次数最多的字符及出现次数？
+
+            输入：const str = 'asddfgdfwwqeweqwezczxcsdfgdgd';
+
+            输出：’d’, 出现6次
+
+
+
+
+-->
+    <script>
+        const str = 'asddfgdfwwqeweqwezczxcsdfgdgd';
+        
+        // function maxstr(str) {
+        //     // 定义一个对象 用于保存str的每一项 以及出现的次数
+        //     var json = {}
+
+        //     // 遍历str 循环其中的每一个字符，将每一个字符的值以及出现的个数拿出来作为json的key和value
+        //     for (var i = 0; i < str.length; i++) {
+
+        //         if (!json[str.charAt(i)]) {
+        //             // 如果不存在 就将当前值添加到json中去，并设置为1
+        //             json[str.charAt(i)] = 1
+        //         } else {
+        //             json[str.charAt(i)]++;
+        //         }
+        //     }
+
+        //     var number = ''
+        //     var num = 0;
+
+        //     for (var j in json) {
+        //         if (json[j] > num) {
+        //             num = json[j]
+        //             number = j
+        //         }
+        //     }
+        //     return {
+        //         num,
+        //         number
+        //     }
+
+        // }
+        // var result = maxstr(str);
+        // console.log(result.num,result.number);
+
+        function strmax(str){
+
+                let json = {}
+                for(let i = 0;i<str.length;i++ ){
+                    // str.chatAt(i) == str.chatAt(0) = a
+                    // json[a] 
+                    
+                    var len = str.charAt(i)
+
+                    if(!json[len]){
+                        json[len] = 1
+                    }else{
+                        json[len] ++
+                    }
+                }
+
+                var num = 0,number
+
+               for(let j  in json) {
+                //    console.log(json[j]);
+              
+                   if(json[j]>num){
+                       num = json[j]
+                       number = j
+                   }
+               }
+               return {num,number}
+        }
+        var zss = strmax(str)
+         console.log(zss.num);
+         console.log(zss.number);
+        
+
+
+    </script>
+</body>
+
+</html>

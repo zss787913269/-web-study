@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    /*
+    给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现了三次。找出那个只出现了一次的元素
+    
+    输入: [2,2,3,2]
+    输出: 3
+   
+//    第一种方法
+    var singleNumber = function(nums) {
+        // 定义一个Maps
+        const map = new Map()
+        // 循环数组
+        for(let i=0;i<nums.length;i++){
+            // 获取Num[i]的值，如果map里面有值 那就直接赋值2 如果没有则赋值一
+            // 此时就得到了一个map的数据结构
+            map.set(nums[i],map.get(nums[i])?2:1)
+        }
+        let res = 0;
+        // 利用for of循环map 
+        for(let [key,value] of map){
+            // console.log()
+            // 在上面已经把数量赋值给了map 此时它的Value就是他的数量 
+            // 如果value等于1 就把对应的key值赋值给res 
+            // 不能用return 因为for of 不支持
+            // 使用break 中断循环
+            if(value ==1){
+                res = key
+                break
+            }
+        }
+        return res
+    };  
+ */
+
+// 第二种方法
+
+        const singleNumber = function(nums) {
+      
+      
+          
+            return nums.reduce((x,y) => x ^ y)
+            // x^y 会被return 出去
+            // return 出去的值 就会变成x值 下面的值变成y值 依次循环计算下次
+         
+        }
+
+        console.log(singleNumber([2,2,3,2]))
+
+    
+    </script>
+
+</body>
+</html>

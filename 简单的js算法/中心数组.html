@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+        我们是这样定义数组中心索引的：数组中心索引的左侧所有元素相加的和等于右侧所有元素相加的和。
+        输入: 
+            nums = [1, 7, 3, 6, 5, 6]
+            输出: 3
+        解释: 
+            索引3 (nums[3] = 6) 的左侧数之和(1 + 7 + 3 = 11)，与右侧数之和(5 + 6 = 11)相等。
+            同时, 3 也是第一个符合要求的中心索引。
+
+
+
+        输入: 
+            nums = [1, 2, 3]
+        输出: -1
+        解释: 
+            数组中不存在满足此条件的中心索引。  
+
+     -->
+    <script>
+
+        // 思路 先找到中间的元素 然后两边的元素相加 在判断两边的元素是否相等
+        // 如果有两个中心索引 返回最靠近左边的那一个
+
+
+        // let arr = [-1,-1,-1,-1,-1,0]
+
+        // // 如果等于整数 -1 
+        // // 把中间这两个数排除 然后把左边跟右边相加
+
+
+        // let len = (arr.length/2)  
+
+        // let left = 0, right = 0
+      
+
+        // for(let i=0;i<len;i++){
+        //     left = left + arr[i]
+        // }
+        // for(let i=len+1;i<arr.length;i++){
+        //     right = right + arr[i]
+        // }
+       
+
+
+
+    let nums = [-1,-1,-1,-1,-1,0]
+
+        var pivotIndex = function(nums) {
+
+                if(nums.length < 3) return -1;
+
+                let sum=0 , left=0
+                for(let i=0;i<nums.length;i++) {
+                    sum+=nums[i]
+                }
+
+                for(let i=0;i<nums.length;i++){
+                    console.log(sum,nums[i],left,sum-left)
+                    if((sum-nums[i])/2==left){
+                        return i;
+                    }
+                    left+=nums[i]
+                }
+                return -1;
+                };
+
+
+
+
+                pivotIndex(nums)
+
+    
+
+
+
+    </script>
+
+</body>
+
+</html>

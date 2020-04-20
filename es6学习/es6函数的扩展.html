@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    
+    
+    
+    function add(x,y="world"){
+        console.log(x,y)
+    }
+
+    // add("hello")
+    // add("hello","zym")
+    // add("hello")
+
+    function foo({x,y=5}){
+        console.log(x,y)
+    }
+
+    // foo({})
+
+    function m1({x = 0, y = 0} = {}) {
+         return [x, y];
+    }
+
+    function m2({x, y} = { x: 0, y: 0 }) {
+        return [x, y];
+    }
+
+    // console.log(m1())
+    // console.log(m2())
+
+
+        let x = 1;
+
+        function f(y = x) {
+            let x = 2;
+        console.log(y);
+        }
+
+        f() // 1
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

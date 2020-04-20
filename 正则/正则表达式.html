@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+        
+        //以数字开头输出
+        // let reg =/^\d+$/;
+        // console.log(reg.test("das"));           //false
+        // console.log(reg.test("1das"));          //false
+        // console.log(reg.test("3454563"));       //false
+        
+        // 以1开头的11位电话号码
+        // let reg =/^1\d{10}$/;
+      
+        // console.log(reg.test("15977602740")); //true
+
+        // 转义字符的使用 \. 匹配2.3  .不是小数点 是除了\n以外的任意字符
+
+        // let reg = /^2\.3$/
+        // console.log(reg.test("2@3")); //false
+        // console.log(reg.test("2.3")); //true
+
+
+        // x|y的使用 匹配有18或者19的字符串
+
+        // let reg = /^(18|19)$/
+        // console.log(reg.test("18"));  //true
+        // console.log(reg.test("19"));  //true
+        // console.log(reg.test("1829")); //false
+        // console.log(reg.test("198")); //false
+
+        
+        //中括号出现的字符一般都代表本身的含义
+        // let reg = /^[@+]$/ //以@开头 或者以 + 结尾 出现一次
+        // console.log(reg.test('@@')); //false
+        // console.log(reg.test('@+')); //false
+
+        // let reg = /^[@+]$/ //以@开头 或者以 + 结尾 出现多次
+        // console.log(reg.test('@@')); //true
+        // console.log(reg.test('@+')); //true
+
+        // 中括号中不存在多位数
+
+        // let reg  = /^[18]$/;
+        // console.log(reg.test("1")); //true
+        // console.log(reg.test("8")); //true
+        // console.log(reg.test("18")); //false
+        
+
+        
+
+       
+       
+
+
+
+
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

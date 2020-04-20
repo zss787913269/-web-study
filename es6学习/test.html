@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+     let ws = new WebSocket("ws://192.168.31.211:9503");
+     
+     ws.onopen = function(){
+       let arr = [
+         {
+           name:"zym"
+         }
+       ]
+
+       let a = JSON.stringify(arr)
+       ws.send(a);
+       alert("数据发送中");
+     }
+
+     ws.onmessage = function(evt){
+       var msg = evt.data;
+       console.log(msg)
+       alert("数据已接收");
+     }
+
+     ws.onclose = function(){
+       alert("连接关闭")
+     }
+
+
+  </script>
+</body>
+</html>

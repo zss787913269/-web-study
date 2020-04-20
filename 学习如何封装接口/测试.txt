@@ -1,0 +1,174 @@
+	register(){
+			let obj = {
+				password:123456,
+				telephone:123456,
+				smscode:8412
+			}
+			jbim.get("?s=App.Login.Register",obj).then((res)=>{
+				console.log(res);
+			})
+		},
+			// 单聊
+			SendSingleMsg(){
+					jbim.sendMsg(1214290434465792,1,"测试单聊接口",1).then((res)=>{
+						console.log(res);
+					})
+				},
+				//获取用户信息
+				getUserInfo(){
+					jbim.getUserInfo(1214292211949568).then(res=>{
+						console.log(res);
+					})
+				},
+				//获取好友列表
+				friendsGetList(){
+					jbim.friendsGetList().then(res=>{
+						console.log(res);
+					})
+				},
+				// 添加好友
+				friendsAdd(){
+					jbim.friendsAdd(1214292211949568).then(res=>{
+						console.log(res);
+					})
+				},
+				//删除好友
+				friendsRemove(){
+					jbim.friendsRemove(1214292211949568).then(res=>{
+						console.log(res);
+					})
+				},
+				// 获取用户自己的信息
+				usersGetMyInfo(){
+					jbim.usersGetMyInfo().then(res=>{
+						console.log(res);
+					})
+				},
+				//生成加好友邀请码
+				friendGenJoinPleaseCode(){
+					jbim.friendGenJoinPleaseCode().then(res=>{
+						console.log(res);
+					})
+				},
+				// 邀请码加好友
+				friendJoinPlease(){
+						jbim.friendJoinPlease(947084).then(res=>{
+							console.log(res);
+						})
+				},
+				//创建班级
+				classGroupCreate(){
+					jbim.classGroupCreate("张艺谋培训班",'描述信息').then(res=>{
+						console.log(res);
+					})
+				},
+				// 获取某用户的群组列表
+				classGroupGetUserGroup(){
+					jbim.classGroupGetUserGroup().then(res=>{
+						console.log(res);
+					})
+				},
+				// 删除班级
+				classGroupDelete(){
+					jbim.classGroupDelete(1220325028167680).then(res=>{
+						console.log(res);
+					})
+				},
+				// 生成加入班级邀请码 
+				classGroupGenJoinPleaseCode(){
+					jbim.classGroupGenJoinPleaseCode(1220325028167680).then(res=>{
+						console.log(res);
+					})
+				},
+				//邀请码加入班级  相同账号可以进入
+				classGroupJoinPlease(){
+					jbim.classGroupJoinPlease(614370).then(res=>{
+						console.log(res);
+					})
+				},
+				// 获取班级成员列表
+				classGroupGetAllMember(){
+					jbim.classGroupGetAllMember(1220348031578112).then(res=>{
+						console.log(res.data);
+					})
+				},
+				// 退出班级
+				classGroupExitmembers(){
+					jbim.classGroupExitmembers(1220348031578112).then(res=>{
+						console.log(res);
+					})
+				},
+				//删除班级成员
+				classGroupDelMember(){
+					// gid,userids
+					jbim.classGroupDelMember(1220348031578112,1214290434465792).then(res=>{
+						console.log(res.data);
+					})
+				},
+				//增加班级成员
+				classGroupAddMember(){
+					// gid,userids
+					jbim.classGroupAddMember(1220348031578112,1214290434465792).then(res=>{
+						console.log(res.data);
+					})
+				},
+				//获取班级详情
+				classGroupGetInfo(){
+					// gid,userids
+					jbim.classGroupGetInfo(1220348031578112).then(res=>{
+						console.log(res.data);
+					})
+				},
+				//班级备注信息
+				classGroupGetMembersInfo(){
+					jbim.classGroupGetMembersInfo(1220348031578112).then(res=>{
+						console.log(res.data);
+					})
+				},
+				//批量用户在线状态查询
+				usersGetManyOnline(){
+					jbim.usersGetManyOnline(1220301479997440).then(res=>{
+						console.log(res.data);
+					})
+				},
+			classGroupUpdateInfo(){
+				jbim.classGroupUpdateInfo().then(res=>{
+					console.log(res);
+				})
+			},
+			// 获取个人所在班级信息
+			usersGetClassGroupInfo(){
+				jbim.usersGetClassGroupInfo().then(res=>{
+					console.log(res);
+				})
+			},
+			// 用户在线状态查询
+			usersGetOnline(){
+				jbim.usersGetOnline(1220301479997440).then(res=>{
+					console.log(res);
+				})
+			},
+			// 修改密码 错误
+			usersModifyPsw(){
+				jbim.usersModifyPsw(123456,1234567).then(res=>{
+					console.log(res);
+				})
+			},
+			//加入黑名单
+			addUsersToBlacklist(){
+				jbim.addUsersToBlacklist(1220301479997440).then(res=>{
+					console.log(res);
+				})
+			},
+			// 获取登录在线设备信息
+			getOnlineDeviceInfo(){
+				jbim.getOnlineDeviceInfo().then(res=>{
+					console.log(res);
+				})
+			},
+			// 文件下载
+			fileDownload(){
+				jbim.fileDownload(1220596132823040).then(res=>{
+					console.log(res);
+				})
+			},

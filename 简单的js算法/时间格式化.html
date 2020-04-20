@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    
+    function format(time){
+        
+        var m,s 
+        // 得到分钟 是一个变量
+        m =Math.floor( time/60)
+
+        // 得到秒  是一个变量
+
+        s = time%60
+
+        // 转化成字符串 
+        m=m+''
+        s=s+''
+
+       var ss= m>10?m:"0"+m
+        var h =s>10?s:'0'+s
+
+        console.log(ss+':'+h);
+
+
+
+
+    }
+  
+        
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>
